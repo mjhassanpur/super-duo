@@ -10,6 +10,19 @@ public class Utilies
     public static final int CHAMPIONS_LEAGUE = 362;
     public static final int PRIMERA_DIVISION = 358;
     public static final int BUNDESLIGA = 351;
+
+    public static final int DATE_COL = 1;
+    public static final int TIME_COL = 2;
+    public static final int HOME_COL = 3;
+    public static final int AWAY_COL = 4;
+    public static final int LEAGUE_COL = 5;
+    public static final int HOME_GOALS_COL = 6;
+    public static final int AWAY_GOALS_COL = 7;
+    public static final int MATCH_ID = 8;
+    public static final int MATCH_DAY = 9;
+
+    public static final String EMPTY_STRING = "";
+
     public static String getLeague(int league_num)
     {
         switch (league_num)

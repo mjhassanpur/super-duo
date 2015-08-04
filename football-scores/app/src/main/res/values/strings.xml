@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="league_descr">league</string>
+    <string name="matchday_descr">match day</string>
+    <string name="share_descr">share</string>
+    <string name="about_descr">about</string>
+    <string name="home_crest_descr">home crest</string>
+    <string name="home_name_descr">home team name</string>
+    <string name="score_descr">score</string>
+    <string name="data_descr">data</string>
+    <string name="away_crest_descr">away crest</string>
+    <string name="away_name_descr">away name</string>
+    <string name="widget_home_team_descr">home team</string>
+    <string name="widget_final_score_descr">final score</string>
+    <string name="widget_away_team_descr">away team</string>
+    <string name="widget_time_descr">match time</string>
+    <string name="widget_name_descr">title</string>
+
     <string name="app_name">Football Scores</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

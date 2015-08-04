@@ -9,6 +9,7 @@
     <TextView android:text="@string/about_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/about_descr"
         android:gravity="center"
         android:textSize="12sp"
         />

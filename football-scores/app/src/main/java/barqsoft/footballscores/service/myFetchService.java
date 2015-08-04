@@ -23,7 +23,6 @@ import java.util.TimeZone;
 import java.util.Vector;
 
 import barqsoft.footballscores.DatabaseContract;
-import barqsoft.footballscores.R;
 
 /**
  * Created by yehya khaled on 3/2/2015.
@@ -113,15 +112,15 @@ public class myFetchService extends IntentService
             if (JSON_data != null) {
                 //This bit is to check if the data contains any matches. If not, we call processJson on the dummy data
                 JSONArray matches = new JSONObject(JSON_data).getJSONArray("fixtures");
-                //if (matches.length() == 0) {
+                if (matches.length() == 0) {
                     //if there is no data, call the function on dummy data
                     //this is expected behavior during the off season.
-                    processJSONdata(getString(R.string.dummy_data), getApplicationContext(), false);
-                    //return;
-                //}
+                    //processJSONdata(getString(R.string.dummy_data), getApplicationContext(), false);
+                    return;
+                }
+                Log.d(LOG_TAG, JSON_data);
 
-
-                //processJSONdata(JSON_data, getApplicationContext(), true);
+                processJSONdata(JSON_data, getApplicationContext(), true);
             } else {
                 //Could not Connect
                 Log.d(LOG_TAG, "Could not connect to server.");
@@ -182,7 +181,10 @@ public class myFetchService extends IntentService
                         League.equals(SERIE_A)             ||
                         League.equals(CHAMPIONS_LEAGUE)    ||
                         League.equals(BUNDESLIGA)          ||
-                        League.equals(PRIMERA_DIVISION)     )
+                        League.equals(PRIMERA_DIVISION)    ||
+                        League.equals("395")               ||
+                        League.equals("397")               ||
+                        League.equals("403")                )
                 {
                     match_id = match_data.getJSONObject(LINKS).getJSONObject(SELF).
                             getString("href");
