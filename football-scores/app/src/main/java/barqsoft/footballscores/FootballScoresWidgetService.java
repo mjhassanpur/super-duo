@@ -60,7 +60,9 @@ public class FootballScoresWidgetService extends RemoteViewsService {
                 matchTime = mCursor.getString(Utilies.TIME_COL);
                 homeTeam = mCursor.getString(Utilies.HOME_COL);
                 awayTeam = mCursor.getString(Utilies.AWAY_COL);
-                finalScore = Utilies.getScores(mCursor.getInt(Utilies.HOME_GOALS_COL), mCursor.getInt(Utilies.AWAY_GOALS_COL));
+                finalScore =
+                        Utilies.getScores(
+                                mCursor.getInt(Utilies.HOME_GOALS_COL), mCursor.getInt(Utilies.AWAY_GOALS_COL), mContext);
             }
             views.setTextViewText(R.id.widget_time, matchTime);
             views.setTextViewText(R.id.widget_home_team, homeTeam);
